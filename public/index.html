@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+  Name: Jalen Higgins
+  Date: 11.01.2025
+  CSC 372-01
+  This is the landing page for the Jokebook MVC CRUD app. It shows a random joke on load,
+  lists categories, fetches jokes by category (with optional limit), and submits new jokes.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jokebook</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>Jokebook</h1>
+
+  <section>
+    <h2>Random Joke</h2>
+    <pre id="randomOut">Loading...</pre>
+    <button id="getRandom">Get Another Random Joke</button>
+  </section>
+
+  <section>
+    <h2>Categories</h2>
+    <button id="loadCategories">Load Categories</button>
+    <ul id="categoryList"></ul>
+  </section>
+
+  <section>
+    <h2>Jokes By Category</h2>
+    <label>Category:
+      <input type="text" id="byCatInput" placeholder="funnyJoke" />
+    </label>
+    <label>Limit:
+      <input type="number" id="limitInput" placeholder="2" />
+    </label>
+    <button id="getByCat">Fetch</button>
+    <pre id="byCatOut"></pre>
+  </section>
+
+  <section>
+    <h2>Add a Joke</h2>
+    <form id="addForm">
+      <label>Category: <input name="category" required></label><br>
+      <label>Setup: <input name="setup" required></label><br>
+      <label>Delivery: <input name="delivery" required></label><br>
+      <button type="submit">Add Joke</button>
+    </form>
+    <pre id="addOut"></pre>
+  </section>
+
+ <script defer src="/js/main.js"></script>
+</body>
+</html>
